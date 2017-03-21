@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: randi64.h
+    > File Name: rand64.h
     > Author: hemingchen
     > Mail: chmkeily@gmail.com 
     > Created Time: 2017-03-20 22:02:23
@@ -13,7 +13,14 @@ typedef unsigned char uint8_t;
 
 //线性同余算法生成随机数
 //Rn+1 = (214013 * Rn + 2531011) % MAX, 一般MAX是2的幂, 以获得2进制整数位
-class _Rand
+static uint64_t __holdrand = 1;
+
+void srand64(uint64_t seed)
 {
-	
+	__holdrand = seed;
+}
+
+uint64_t rand64()
+{
+	return (__holdrand = (__holdrand * 214013L + 2531011L) & 0x7fffffffffffffffL);
 }
