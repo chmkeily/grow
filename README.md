@@ -1,5 +1,5 @@
 # grow
-Eager to be growing up
+Keep growing up!
 
 <PRE>
 1.随机数发生器
