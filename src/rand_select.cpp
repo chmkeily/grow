@@ -10,7 +10,7 @@ using namespace std;
 */
 int randv(int m, int n)
 {
-    return m + (int)((n - m + 1) * (rand() / (RAND_MAX + 1)));
+    return m + (int)((n - m + 1) * (rand() / (RAND_MAX + 1.0)));
 }
 
 /**
