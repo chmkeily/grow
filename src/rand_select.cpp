@@ -49,7 +49,27 @@ void print_arrint(int k, int *arrInt)
 }
 
 /////////////////////
+//加权随机
+class CCandidate
+{
+public:
+    int GetProb() { return m_iProb; }
+    int GetAttr() = 0;
 
+private:
+    int m_iProb;    //概率因子
+};
+
+/**
+*
+*/
+int rand_select(int N, int K, CCandidate **pastSelected, CCandidate *pastCandidates)
+{
+    return 0;
+}
+
+
+//////////////////////////////////
 #define N 100
 #define K 10
 
