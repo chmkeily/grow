@@ -12,6 +12,7 @@
 namespace xgrow
 {
 
+static int g_MT_curr_1;
 static int g_MT_curr;
 static int g_MT_next;
 static int g_MT_next397;
@@ -37,8 +38,15 @@ void srand(int seed)
 
 int rand()
 {
+    int y = g_MT_curr;
+    y ^= (y >> 11);
+    y ^= ((y << 7) & 0x9d2c5680);
+    y ^= ((y << 15) & 0xefc60000);
+    y ^= (y >> 18);
     
-    return 0;
+    g_MT_curr = ((g_MT_curr ^ (g_MT_curr >> 30)) * 0x6c078965 + i) & 0xffffffff;
+    
+    return y;
 }
 
 }
