@@ -5,11 +5,11 @@
     > Mail: chmkeily@gmail.com 
     > Created Time: 2017-04-11 16:58:33
  ************************************************************************/
+#ifndef __MT19937_32BITS_H__
+#define __MT19937_32BITS_H__
 
 #include <stblib.h
 #include <time.h>
-
-typedef long long int int64_t;
 
 namespace xgrow
 {
@@ -60,4 +60,6 @@ int64_t rand()
     return y;
 }
 
-}
+} //end of namespace xgrow
+
+#endif
