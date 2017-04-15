@@ -8,7 +8,7 @@
 #ifndef __MT19937_32BITS_H__
 #define __MT19937_32BITS_H__
 
-#include <stblib.h
+#include <stblib.h>
 #include <time.h>
 
 namespace xgrow
