@@ -8,7 +8,7 @@
 #ifndef __MT19937_32BITS_H__
 #define __MT19937_32BITS_H__
 
-#include <stblib.h>
+#include <stdlib.h>
 #include <time.h>
 
 namespace xgrow
@@ -32,7 +32,7 @@ void generate()
 {
     for (int i = 0; i < 624; i ++)
     {
-        int y   = g_MT[i] & 0x80000000) + (g_MT[(i + 1) % 624] & 0x7fffffff);   //取MT[i]的最高位和M[i+1]的低31位合并
+        int y   = (g_MT[i] & 0x80000000) + (g_MT[(i + 1) % 624] & 0x7fffffff);   //取MT[i]的最高位和M[i+1]的低31位合并
         g_MT[i] = g_MT[(i + 397) % 624] ^ (y >> 1);
         
         if (y & 0x01)
