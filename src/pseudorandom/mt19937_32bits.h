@@ -42,7 +42,7 @@ void generate()
     }
 }
 
-int64_t rand()
+int rand()
 {
     if (0 == g_index)
     {
