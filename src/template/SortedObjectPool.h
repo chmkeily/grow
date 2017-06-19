@@ -12,6 +12,12 @@ struct tagObjBase
 	
 };
 
+struct tagSortedObjPoolHead
+{
+	char *m_pcDataHead;
+	char *m_pszData;
+};
+
 template <typename _KeyType, typename _DataType>
 class CSortedObjectPool
 {
