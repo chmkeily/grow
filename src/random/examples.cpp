@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: exampls.cpp
+    > File Name: examples.cpp
     > Author: hemingchen
     > Mail: chmkeily@gmail.com 
     > Created Time: 2017-04-29 16:17:08
